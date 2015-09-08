@@ -8,11 +8,11 @@ http://www.mono-project.com/docs/getting-started/install/linux/
 
 ### 2. 编译
 ```
-mcs hello.cs /r:SimpleJson.dll /r:pomelo-dotnetClient.dll
+mcs -out:test.exe -recurse:'*.cs' /r:SimpleJson.dll /r:pomelo-dotnetClient.dll
 ```
-获得hello.exe
+获得test.exe
 
 ### 3. 执行
 ```
-mono hello.exe
+mono test.exe
 ```

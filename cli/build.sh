@@ -1,0 +1,1 @@
+mcs -define:HS_CONSOLE -out:test.exe -recurse:'*.cs' /r:SimpleJson.dll /r:pomelo-dotnetClient.dll
