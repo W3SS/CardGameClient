@@ -1,1 +1,1 @@
-mcs -define:HS_CONSOLE -out:test.exe -recurse:'*.cs' /r:SimpleJson.dll /r:pomelo-dotnetClient.dll
+mcs -define:HS_CONSOLE -define:UNITY_EDITOR -out:test.exe -recurse:'*.cs' /r:SimpleJson.dll /r:pomelo-dotnetClient.dll

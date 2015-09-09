@@ -1,7 +1,5 @@
-// 这里只写纯逻辑的代码，供外部使用
-// 最终目标是把这些逻辑都改写成lua逻辑，方便以后通过更新lua脚本来热更新游戏逻辑
-// 为了能机器学习，这里的逻辑都应该是瞬时的
 public class Card {
+
 	// 初始发牌换牌用flag
 	private bool isUnChoose = false;
 
@@ -22,5 +20,10 @@ public class Card {
 
 	public void moveCard() {
 		
+	}
+
+	int _cardId = 0;
+	public void initCardByCardId(int cardId) {
+		_cardId = cardId;
 	}
 }
