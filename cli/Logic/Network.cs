@@ -57,8 +57,10 @@ public class Network {
 		pclient.request(handlerName, msg, cb);
 	}
 
-	static void rpcHandler(int rpcId, string cmd, JsonObject dataJson) {
+	// TODO remove this hacking "public"
+	public static void rpcHandler(int rpcId, string cmd, JsonObject dataJson) {
 		Debug.DevLog("" + rpcId + ", " + cmd);
+		Debug.DevLog(SimpleJson.SimpleJson.SerializeObject(dataJson));
 		// 如果是正在处理中的rpc通信，让他接着处理
 		if (rpcHandlers.ContainsKey(rpcId)) {
 			rpcResponse[rpcId] = dataJson;

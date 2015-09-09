@@ -8,10 +8,10 @@ public class Global
 {
 	static public void Start () {
 		Debug.Log("Hello Mono World");
-		Game game = null;
+		Game game = new Game();
 		Network.connect(() => {
 			// test
-			game = new Game();
+			game.requestRoomTest();
 		});
 		Thread.Sleep(10000);
 	}

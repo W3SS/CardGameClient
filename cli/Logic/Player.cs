@@ -21,4 +21,10 @@ public class Player {
 	// 英雄技能
 	// 测试开发阶段，先默认技能都是火焰冲击吧
 	ISkill _currSkill = new Skill_FireBall();
+
+	CardGroup _deck = new CardGroup(30);
+
+	public CardGroup getDeck(){
+		return _deck;
+	}
 }
