@@ -14,6 +14,10 @@ public class UCard : MonoBehaviour {
 	}
 	CardState _state = CardState.DECK;
 
+	public UCard() {
+		
+	}
+
 	void OnMouseEnter() {
 		switch(_state) {
 			case CardState.INIT_HAND_CHOOSE:
