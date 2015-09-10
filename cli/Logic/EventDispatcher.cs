@@ -1,7 +1,13 @@
 using System.Collections.Generic;
 
 public class EventDispatcher {
+	public int _guid;
+	static int guidGen = 0;
 	List<IEventListener> _listeners = new List<IEventListener>();
+
+	public EventDispatcher() {
+		_guid = ++guidGen;
+	}
 
 	public void addEventListener(IEventListener listener) {
 		_listeners.Add(listener);
